@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+		<head>
+			<title>
+				HTML test
+			</title>
+			<style>
+				#point {background: yellow;color: black}
+				#number {background:blue}
+
+				.row1 {color: #eea}
+				.row2 {color: red}
+				<!--可以直接定义一个种类比如 li {background: yellow}-->
+				<!--可以直接定义其特定种类比如仅unordered list里面的list ul li {background: yellow}-->
+				<!--这份程序仅为测试功能 并不为最优设计-->
+				h1:{color: white}
+				h1:hover{color: orange}
+				a:visited{color:grey}
+				p:empty{background: : brown}
+				a:active{background: :purple}
+				table,td,th {border: 1px solid black; padding: 15px}
+			</style>
+
+		</head>
+		<!---------------------------------------------------------------------------------->
+		<body style="margin: 0;background-image:url(/Users/qitan/Downloads/照片.jpg);color: #ffffff;text-align: center;">
+				<h1 style="margin:0;background-color: purple;
+				padding:5px">  HTML 入门
+				<!---------------------------------------------------------------------------------->
+				</h1>
+
+					<p style="margin:3px;padding: 3px">这是第一行</p>
+					<p>学习网站<a href="https://www.coursera.org/learn/html-css-javascript/lecture/VS8ao/links">   点击进入</a></p>
+					<p>左下是我特别喜欢的一首歌哦</p>
+					<!---------------------------------------------------------------------------------->
+					<!--table>tbody>tr>td-->
+					<table align="center">
+						<tr>
+						<td class="row1">W</td>
+						<td class="row1">Y</td>
+						<td class="row1">F</td>
+						</tr>
+						<tr>
+						<td class="row2">5</td>
+						<td class="row2">2</td>
+						<td class="row2">0</td>
+						</tr>
+						<tr>
+						<td>X<sub>1</sub></td>
+						<td>X<sup><del>3</del></sup></td>
+						<td><mark>1</mark></td>
+						</tr>
+
+						<!---------------------------------------------------------------------------------->
+					</table>
+					<ul style="margin:2px ; padding: 2px">
+					<li id="point"><del><u>Point 4</u></del>
+					</li>
+					</ul>
+					<ol style="margin:2px ; padding: 2px">
+						<li id="number">
+						No chance for <ins>bigger</ins> <small>3</small> or even <ins>smaller</ins> <big>4</big>
+						</li>
+					</ol>
+
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<br></br>
+					<!---------------------------------------------------------------------------------->
+					<form action="html_data.php" method="get">
+						<!--get 是默认method 另一个是post（输入多字符以及保密字符->不会
+						显示在顶部url上）-->
+
+							<textarea rows="3" cols="60" name="feedback">Please leave me a message if you understand</textarea>
+							<br>
+							<input type="submit" value="Send">
+							<br>
+							<fieldset>
+							<label for="age">Your age:</label>
+							<input type="number" min="0" max="99" step="1" value="18" id="age" name="age" required="required"><br>
+							<label for="birthday">Your birthday:</label>
+							<input type="date" id="birthday" name="birthday"><br>
+							<label for="wakeup">Your want to wake up at:</label>
+							<input type="time" id="wakeup" name="wakeup"><br>
+							<label for="color">Your favorite color:</label>
+							<input type="color" id="color" name="color"><br>
+							<label for="mood">Your mood: </label>
+							Bad <input type="range" min="0" max="100" step="5" value="50" id="mood" name="mood"> Good <br>
+							<input type="submit" value="Submit">
+						</fieldset>
+					</form>
+					<!---------------------------------------------------------------------------------->
+					<div style="position:fixed; bottom:0; left:0;">
+    			<audio src="/Users/qitan/Music/网易云音乐/童话镇.mp3 " controls>
+							<p> Sorry! Your brower does not support the <i>audio</i> tag</p>
+							</audio>
+					</audio>
+				</div>
+						<span style="width:100;height:200;display:none"><<删掉就是自动播放功能加个loop?>audio src="/Users/qitan/Music/网易云音乐/童话镇.mp3 "autoplay="autoplay"> </<删掉就是自动播放功能>audio>
+					</span>
+			</div>
+		</body>
+</html>
