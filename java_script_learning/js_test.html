@@ -1,13 +1,40 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>JavaScript Test</title>
 	<script>
-		if (confirm("想看你的自拍吗？"))
-		document.location.href="http://z9x9.com/wp-content/uploads/2016/09/06/6797064.jpg"
-</script>
+		var user_name;
+		user_name = prompt("What is your name?");
+		document.write("Welcome to my page" + user_name + "!");
+	</script>
+	<script>
+		if (confirm("想看你的自拍吗" + user_name + "?"))
+			document.location.href = "http://z9x9.com/wp-content/uploads/2016/09/06/6797064.jpg"
+	</script>
+	<script>
+	var ppp =3;
+	ppp = "cute";
+	ppp = parseInt("99.5");
+	//parseFloat
+	//St
+	alert(ppp + " is type :"+ typeof ppp);
+	function check_user_age(){
+		if (age_of_user()<18) {
+			alert("Please go to another page.")
+		}
+		}
+		function age_of_user(){
+			var age_text, age;
+			age_text=prompt("What is your age?");
+			age=parseInt(age_text);
+			return age;
+		}
+	</script>
 </head>
+
 <body>
 
 </body>
+
 </html>
