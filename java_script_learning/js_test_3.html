@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>
+        Array Test
+    </title>
+</head>
+
+<body>
+    <script>
+        var pets = ["Dog", "Cat","Rabbit"];
+        alert(pets.join(" and "));
+        pets.push("Hamaster");
+        alert(pets.length);
+        alert(pets[3]);
+        pets.unshift("Hamaster");//Hamaster 变成第一个元素 (最后一个也是Hamaster)
+        alert(pets);
+        var result=pets.pop();//<---result是 🐹, pets 是🐹🐶🐱没🐰
+        alert(pets);
+        alert("提出去的是"+result);
+        var result= pets.shift();//result是🐹, pet 是🐰🐶🐱
+        alert(pets);
+        alert("提出去的是"+result);
+        var primes=[1, 2, 3,];
+        var result= pets.concat(primes);
+        alert("合并后是"+result);
+        var test=["miao","wang","haha"]
+        alert(result.indexOf(1)+"<---index 是1")
+        var random_number;
+        random_number=Math.random() * 8;
+        random_number=Math.floor(random_number);
+        alert("Random number in the range 0 to 8(not include:\n)"+random_number);
+    </script>
+</body>
+
+</html>
