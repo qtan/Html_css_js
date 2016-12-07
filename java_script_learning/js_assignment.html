@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+</head>
+<title>Guess the Color Game</title>
+
+<body background-color:white;padding:0;margin:0>
+    <script>
+        var color = ["blue", "cyan", "gold", "gray", "green", "magenta", "orange", "red", "white", "yellow"];
+        var color_text = color.join();
+        continue_test = false;
+        var count = 0;
+        while (!continue_test) {
+            console.log("JavaScript Alert")
+            again = prompt("I am thinking of one of these color:\n\n" + color_text + "\n\nWhat color am I thinking of?")
+            if (again.toLowerCase() == "gray") {
+                count++;
+                if (count == 1) {
+                    document.body.style.background = "gray";
+                    alert("Congratulations!\n It took you 1 time to finish the game!\n You can see the colour in the background.")
+                    continue_test = true;
+                } else {
+                    document.body.style.background = "gray";
+                    alert("Congratulations!\n It took you " + count + " times to finish the game!\n You can see the colour in the background.")
+                    continue_test = true;
+                }
+
+            } else if (color.indexOf(again.toLowerCase()) == -1) {
+                alert("Sorry,I dont recognize your color.\n\n Please try again.")
+                count++;
+            } else if (again.toLowerCase() > "gray") {
+                alert("Sorry, your guess is not correct!\n\nHint:Your color is alphabetically higher than mine.\n\nPlease try again.")
+                count++;
+            } else if (again.toLowerCase() < "gray") {
+                alert("Sorry, your guess is not correct!\n\nHint:Your color is alphabetically lower than mine.\n\nPlease try again.")
+                count++;
+            } else {
+                alert("There is a bug in this program!")
+            }
+        }
+    </script>
+</body>
+
+</html>
