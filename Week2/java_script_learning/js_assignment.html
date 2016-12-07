@@ -15,12 +15,13 @@
             console.log("JavaScript Alert")
             again = prompt("I am thinking of one of these color:\n\n" + color_text + "\n\nWhat color am I thinking of?")
             if (again.toLowerCase() == "gray") {
-              document.body.style.background = "gray";
                 count++;
                 if (count == 1) {
+                    document.body.style.background = "gray";
                     alert("Congratulations!\n It took you 1 time to finish the game!\n You can see the colour in the background.")
                     continue_test = true;
                 } else {
+                    document.body.style.background = "gray";
                     alert("Congratulations!\n It took you " + count + " times to finish the game!\n You can see the colour in the background.")
                     continue_test = true;
                 }
