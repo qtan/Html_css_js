@@ -1,2 +1,23 @@
 <!doctype html>
 <html>
+
+<body>
+    <script>
+        var pets = ["Dog", "Cat", "Rabbit", "Hamster", "Rabbit", "Rabbit", "Dog", "Cat", "Hamster", "Hamster", "Rabbit"];
+        var result = pets.splice(2,0,"Rabbit");//加个rabbit入位置2
+        result =pet.sploce(2,1);//从位置2取出1个
+        result=pets.splice(1,1,"sb","bs");
+        var rabbitPositions = [],
+            startSearchAt = 0;
+        do {
+            foundAt = pets.indexOf("Rabbit", startSearchAt);
+            if (foundAt != -1) {
+                rabbitPositions.push(foundAt);
+                startSearchAt = foundAt + 1;
+            }
+
+        } while (foundAt! = -1);
+        alert(rabbitPositions); //This shouws [2,4,5,10]
+    </script>
+</body>
+</html>
