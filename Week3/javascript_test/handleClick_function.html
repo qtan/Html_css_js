@@ -13,6 +13,13 @@
     }
     alert(thisPath);
   }
+  function attachHandler(node){
+    if(node == null) return;
+    node.onclick = handleClick;
+
+    for (var i = 0; i < node.childNodes.length; ++i)
+    attachHandler(node.childNodes[i])
+  }
   </script>
 </head>
 </html>
