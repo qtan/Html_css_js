@@ -1,0 +1,18 @@
+<!doctype Html>
+<html>
+<head>
+  <script>
+  function handleClick(event){
+    event.stopPropagation();
+
+    var node = event.target
+    var thisPath = node.nodeName;
+    while (node.parentNode){
+      node = node.parentNode;
+      thisPath = node.nodeName + ">" + thisPath;
+    }
+    alert(thisPath);
+  }
+  </script>
+</head>
+</html>
