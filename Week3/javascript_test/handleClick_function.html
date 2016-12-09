@@ -1,25 +1,28 @@
 <!doctype Html>
 <html>
+
 <head>
-  <script>
-  function handleClick(event){
-    event.stopPropagation();
+    <script>
+        function handleClick(event) {
+            event.stopPropagation();
 
-    var node = event.target
-    var thisPath = node.nodeName;
-    while (node.parentNode){
-      node = node.parentNode;
-      thisPath = node.nodeName + ">" + thisPath;
-    }
-    alert(thisPath);
-  }
-  function attachHandler(node){
-    if(node == null) return;
-    node.onclick = handleClick;
+            var node = event.target
+            var thisPath = node.nodeName;
+            while (node.parentNode) {
+                node = node.parentNode;
+                thisPath = node.nodeName + ">" + thisPath;
+            }
+            alert(thisPath);
+        }
 
-    for (var i = 0; i < node.childNodes.length; ++i)
-    attachHandler(node.childNodes[i])
-  }
-  </script>
+        function attachHandler(node) {
+            if (node == null) return;
+            node.onclick = handleClick;
+
+         (var i = 0; i < node.childNodes.length; ++i)
+                attachHandler(node.childNodes[i]);
+        }
+    </script>
 </head>
+
 </html>
