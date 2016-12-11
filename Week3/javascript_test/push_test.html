@@ -1,1 +1,17 @@
-<!--this is a text-->
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function insert_new_text()
+{
+	var result = document.createTextNode(
+		"This is dynamically added Text!");
+	var textpart =document.getElementById("my_text");
+	textpart.appendChild(result);
+}
+</script>
+</head>
+<body onclick="insert_new_text()">
+<h1 id="my_text">Please click on the page </h1>
+</body>
+</html>
