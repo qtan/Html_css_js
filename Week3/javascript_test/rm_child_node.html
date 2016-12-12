@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <body>
+    <script>
+    //type 1 according to ID
+    var the_node=document.getElementById('id');
+    the_node.parentNode.removeChild(the_node);
+    //type 2 according to type/tagName
+    var the_node=document.getElementsByTagName("p")[0];
+    the_node.parentNode.removeChild(the_node);
+    //can find by name
+    //type 3 according to the id of parentNode
+    var the_parent = document.getElementById('id');
+    the_parent.removeChild(the_parent.firstChild);
+    </script>
+  </body>
+</head>
+</html>
