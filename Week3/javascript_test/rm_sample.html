@@ -16,10 +16,16 @@
       var the_parent=document.getElementById("theBody");
       the_parent.removeChild(the_parent.firstChild);
     }
+    function delete_all_children(){
+      var theNode = document.getElementById('theBody')
+      while (theNode.firstChild)
+      theNode.removeChild(theNode.firstChild);
+    }
     </script>
 </head>
 
 <body id="theBody">
+    <p> Just a test</p>
     <p id="firstP">
         Hello.
     </p>
@@ -28,9 +34,10 @@
     <p id="secondP">
         It's a nice day!
     </p>
-    <button type="button" onclick="delete1()">Example 1</button>
-    <button type="button" onclick="delete2()">Example 2</button>
-    <button type="button" onclick="delete3()">Example 3</button>
+    <button type="button" onclick="delete1()">删hello</button>
+    <button type="button" onclick="delete2()">从第一行tag 是p的字开始删</button>
+    <button type="button" onclick="delete3()">一个一个删</button>
+    <button type="button" onclick="delete_all_children()">全删了</button>
     <p>
         Reload the page to reset the DOM.
     </p>
