@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>onclick to visit other web and alert window</title>
+  </head>
+  <body>
+    <h1> Click on the best social network</h>
+      <img src="google.png" onclick="bad_choice()">
+      <p onclick="go_this_web('http://www.google.ca')"> Google</p>
+      <img src="t.png"onclick="bad_choice()">
+      <p onclick="go_this_web('http://www.twitter.com')"> twitter</p>
+      <img src="facebook.png" onclick="good_choice()">
+      <p onclick="go_this_web('http://www.facebook.ca')"> facebook</p>
+    <script>
+    function good_choice(){alert("Good Choice!");}
+    function bad_choice(){alert("I don't agree!");}
+    function go_this_web(where){window.location.href = where;}
+
+    </script>
+
+  </body>
+</html>
