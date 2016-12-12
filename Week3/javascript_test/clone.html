@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <html>
+
+    <head>
+        <title>
+          clone code
+        </title>
+        <script>
+        function myFuction(){
+          var the_node = document.getElementById('mylist').lastChild;
+          var the clone = the_node.cloneNode(true);//复制列表包括文字节点下的一切（整个分支）
+          document.getElementById("mylist").appendChild(the_clone);
+          }
+
+
+        </script>
+    </head>
+    <body>
+      <ul id="mylist"><li>Good morning></li>
+        <li>Hello</li><ul>
+          <p>Click on the button to clone Node</p>
+          <button onclick="myFuction()">Copy it</button>
+    </body>
+
+    </html>
