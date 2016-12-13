@@ -1,0 +1,17 @@
+<html>
+  <head>
+
+    <title>Events</title>
+  </head>
+  <body id="theBody">
+    <script>
+    function do_something(){alert("page has loaded")}
+    window.onload = do_something;//窗口加载完成后就会执行
+    //window.addEventListener("load",do_something);//same 复制3次就会弹3次
+//---------------------------------------------------------------
+//remove
+//var theBody =document.getElementById("theBody");
+//theBody.removeEventListener("load",do_something);
+    </script>
+  </body>
+</html>
