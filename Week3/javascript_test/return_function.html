@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>return count</title>
+    <script>
+        function counter() {
+            var count = 0;
+            return function() {
+                count++;
+                alert(count);
+            }
+        }
+        var count = counter();
+        count();
+        count();
+        count();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
