@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
 <head>
@@ -44,12 +43,12 @@
         function generateFaces() {
 
             for (var i = 0; i < numberOfFaces; i++) {
-                random_top = Math.floor(Math.random() * 401);
-                random_left = Math.floor(Math.random() * 401);
                 smile_img = document.createElement("img");
                 smile_img.src = "smile.png";
-                smile_img.style.top = random_top+"px";
-                smile_img.style.left = random_left+"px";
+                random_top = Math.floor(Math.random() * 401);
+                random_left = Math.floor(Math.random() * 401);
+                smile_img.style.top = random_top;
+                smile_img.style.left = random_left;
                 theLeftSide.appendChild(smile_img);
             }
         }
