@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Smile Face Game</title>
+    <style>
+        div {
+            position: absolute;
+        }
+
+        img {
+            position: absolute;
+        }
+
+        #leftSide{
+            width: 500px;
+            height: 500px;
+        }
+
+        #rightSide {
+            left: 500px;
+            width: 500px;
+            height:500px;
+            border-left: 1px solid black;
+        }
+    </style>
+</head>
+
+<body onload="generateFaces()">
+    <h1><font face="arial"><bold>Matching Game</bold></font></h1>
+    <p> Click on the extra smiling face on the left.</p>
+    <div id="leftSide">
+    <div id="rightSide">
+    </div>
+    <script>
+        var numberOfFaces = 5;
+        var theLeftSide;
+        var theRightSide;
+        var random_top;
+        var random_left;
+        theLeftSide = document.getElementById("leftSide");
+        theRightSide = document.getElementById("rightSide");
+
+        function generateFaces() {
+
+            for (var i = 0; i < numberOfFaces; i++) {
+                random_top = Math.floor(Math.random() * 401);
+                random_left = Math.floor(Math.random() * 401);
+                smile_img = document.createElement("img");
+                smile_img.src = "smile.png";
+                smile_img.style.top = random_top+"px";
+                smile_img.style.left = random_left+"px";
+                theLeftSide.appendChild(smile_img);
+            }
+        }
+    </script>
+</body>
+
+</html>
