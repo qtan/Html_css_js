@@ -43,4 +43,4 @@ function cloneFace() {
 }
 function getRandNum() {
   return Math.floor(Math.random() * 400);
-// 
+// }
