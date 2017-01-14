@@ -9,16 +9,23 @@
             theImg.src = "cat.png";
             theBody.appendChild(theImg.cloneNode(true));
             var count = 0;
+            var pic = 0;
             for (var i = 0; i < 10; i++, count++) {
+
                 if (i == 5) continue;
                 if (count == 3) {
                     count = 0;
 
+
                     theBody.removeChild(theBody.lastChild);
+                    pic--;
                 } else {
                     theBody.appendChild(theImg.cloneNode(true));
+                    pic++;
                 }
                 if (i > 7) break; //!i=8的时候还是会先⬆️加图片 然后才break
+                //还有一个是loop之前的图片
+                alert(count+" and "+i+" and "+pic +" pictures");
             }
         }
     </script>

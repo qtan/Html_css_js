@@ -13,6 +13,8 @@ function nextLevel(event) {
         theLeftSide.removeChild(theLeftSide.firstChild);
     while (theRightSide.firstChild)
         theRightSide.removeChild(theRightSide.firstChild);
+
+
     generateFaces();
 }
 
@@ -20,6 +22,16 @@ function gameOver() {
     alert("Game Over!");
     theBody.onclick = null;
     theLeftSide.lastChild.onclick = null;
+
+
+    if (confirm("Play again?")) {
+        while (theLeftSide.firstChild)
+            theLeftSide.removeChild(theLeftSide.firstChild);
+        while (theRightSide.firstChild)
+            theRightSide.removeChild(theRightSide.firstChild);
+        numberOfFaces = 5;
+        generateFaces();
+    }
 }
 
 function generateFaces() {
@@ -32,7 +44,7 @@ function generateFaces() {
     }
     cloneFace();
     theLeftSide.lastChild.onclick = function() {
-        nextLevel(event)
+        nextLevel(event)//event in html?
     };
     theBody.onclick = function() {
         gameOver()

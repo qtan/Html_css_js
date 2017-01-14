@@ -1,0 +1,18 @@
+<html>
+  <body>
+    <button id="btn0" onclick="alert('Hello !')">Click Me!</button>
+    <button id="btn1">removeEventListener</button>
+    <script>
+    function do_something(){
+      alert("Clicked")
+    }
+    function clear_listener(){
+      btn0.removeEventListener("click",do_something);
+    }
+    var btn0 = document.getElementById("btn0");
+    btn0.addEventListener("click",do_something);//add event listener有哪些
+    var btn1 = document.getElementById("btn1");
+    btn1.addEventListener("click",clear_listener);
+    </script>
+  </body>
+</html>
